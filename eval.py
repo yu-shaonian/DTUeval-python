@@ -27,10 +27,11 @@ if __name__ == '__main__':
     mp.freeze_support()
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data', type=str, default='data_in.ply')
+    parser.add_argument('--data', type=str, default='./mvsnet001_l3.ply')
+    # data_in.ply /home/leiguojun/mvs_output/mvs_trans_official/mvsnet001_l3.ply
     parser.add_argument('--scan', type=int, default=1)
     parser.add_argument('--mode', type=str, default='mesh', choices=['mesh', 'pcd'])
-    parser.add_argument('--dataset_dir', type=str, default='.')
+    parser.add_argument('--dataset_dir', type=str, default='/mnt/nas_8/datasets/dtu/SampleSet/MVS_Data')
     parser.add_argument('--vis_out_dir', type=str, default='.')
     parser.add_argument('--downsample_density', type=float, default=0.2)
     parser.add_argument('--patch_size', type=float, default=60)
